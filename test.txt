@@ -1,0 +1,36 @@
+CREATE TABLE diseases (
+    ID int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    symptoms varchar(255),
+    medicine varchar(255),
+    PRIMARY KEY (ID)
+);
+
+CREATE TABLE doctors (
+    ID int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    diseaseId int,
+    hospitalId int,
+    PRIMARY KEY (ID)
+);
+
+
+CREATE TABLE hospitals (
+    ID int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    location varchar(255),
+    PRIMARY KEY (ID)
+);
+
+ var improvisedBody="123#45#";
+ for(var i=0;i<5;i++)
+  improvisedBody=improvisedBody.replace("#",",");
+ console.log(improvisedBody);
+
+ for(var i=0;i<improvisedBody.length;i++){
+                                if(improvisedBody.charAt(i)==='#') {
+
+                                console.log("hello");
+                                    improvisedBody.charAt(i) = ',';
+                                }
+                            }
